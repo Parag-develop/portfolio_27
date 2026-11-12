@@ -33,14 +33,24 @@ export const projectSchema = z.object({
   tags: z.array(z.string()).optional(),
 });
 
+export const techStackItemSchema = z.object({
+  name: z.string(),
+  /** simple-icons slug, e.g. "react", "nextdotjs", "typescript" */
+  slug: z.string(),
+});
+
 export const profileSchema = z.object({
   name: z.string(),
   headline: z.string(),
+  tagline: z.string(),
   summary: z.string(),
   location: z.string(),
+  timezone: z.string(),
+  availability: z.string(),
   email: z.string().email(),
   phone: z.string().optional(),
   about: z.string(),
+  techStack: z.array(techStackItemSchema).min(1),
   links: z.array(linkSchema),
   cvHref: z.string().optional(),
   experience: z.array(experienceSchema),
@@ -52,6 +62,7 @@ export const profileSchema = z.object({
 export const siteSchema = z.object({
   title: z.string(),
   description: z.string(),
+  yearLabel: z.string(),
   sections: z.object({
     about: z.boolean(),
     experience: z.boolean(),
@@ -69,3 +80,4 @@ export type SkillGroup = z.infer<typeof skillGroupSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type Education = z.infer<typeof educationSchema>;
 export type ProfileLink = z.infer<typeof linkSchema>;
+export type TechStackItem = z.infer<typeof techStackItemSchema>;

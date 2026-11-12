@@ -2,14 +2,26 @@ import { profileSchema, type Profile } from "@/lib/profile-schema";
 
 const profileData = {
   name: "Parag Palkar",
-  headline: "Frontend Engineer",
+  headline: "Software Developer",
+  tagline: "Software Developer",
   summary:
     "React · Vue · TypeScript · Next.js — accessible, performant web UI",
-  location: "Mumbai, India · Willing to relocate",
+  location: "Mumbai, India",
+  timezone: "Asia/Kolkata",
+  availability: "Open to roles · Willing to relocate",
   email: "paragpalkar97@gmail.com",
   phone: "+91-7738054437",
   about:
-    "Frontend engineer with 3+ years shipping production web apps. Owns feature delivery from Figma handoff through TypeScript implementation, Playwright coverage, deployment, and production support. Builds component-driven UIs in React, Vue, and Next.js. Partners with designers and backend on accessible interfaces using shared UI libraries and REST APIs across compliance, procurement, and logistics. Japanese learner (NAT Q4; studying for JLPT N2) with delivery across India and the GCC.",
+    "Frontend software developer with 3+ years shipping production web apps. Owns feature delivery through TypeScript implementation, Playwright coverage, deployment, and production support. Builds component-driven interfaces in React, Vue, and Next.js, and partners with designers and backend on accessible products using shared libraries and REST APIs across compliance, procurement, and logistics. Japanese learner (NAT Q4; studying for JLPT N2) with delivery across India and the GCC.",
+  techStack: [
+    { name: "Next.js", slug: "nextdotjs" },
+    { name: "React", slug: "react" },
+    { name: "Vue.js", slug: "vuedotjs" },
+    { name: "TypeScript", slug: "typescript" },
+    { name: "Tailwind CSS", slug: "tailwindcss" },
+    { name: "Node.js", slug: "nodedotjs" },
+    { name: "Vite", slug: "vite" },
+  ],
   links: [
     {
       label: "LinkedIn",
@@ -110,6 +122,13 @@ const profileData = {
   ],
   projects: [
     {
+      title: "Kanji study app",
+      description:
+        "Personal React + Vite app for studying Japanese kanji (JLPT-oriented). Built an interactive kanji browser/study UI with Material UI and deployed to Render.",
+      href: "https://react-vite-kanji.onrender.com/",
+      tags: ["React", "Vite", "Material UI", "JLPT"],
+    },
+    {
       title: "The Odin Project — curriculum fixes",
       description:
         "Merged contributions fixing layout inconsistencies across React Ecosystem lessons and diagnosing a curriculum defect from issue analysis through maintainers to live ship.",
@@ -121,13 +140,6 @@ const profileData = {
       description:
         "Shipped a responsive React e-commerce frontend with production-ready flows.",
       href: "https://kicksmedia.in",
-      tags: ["React", "E-commerce"],
-    },
-    {
-      title: "samsdiscus.com",
-      description:
-        "Built a responsive React storefront UI for client web commerce.",
-      href: "https://samsdiscus.com",
       tags: ["React", "E-commerce"],
     },
   ],

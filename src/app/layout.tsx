@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 
+import { ThemeScript } from "@/components/theme-script";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { site } from "@/content/site";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-const display = Fraunces({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
+  variable: "--font-ibm-plex-sans",
 });
 
-const body = Manrope({
+const spaceGroteskHeading = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
+  variable: "--font-space-grotesk",
 });
 
 export const metadata: Metadata = {
@@ -33,9 +34,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${display.variable} ${body.variable} font-sans`}>
-        {children}
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={cn(ibmPlexSans.variable, spaceGroteskHeading.variable)}
+    >
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="font-sans antialiased">
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   );

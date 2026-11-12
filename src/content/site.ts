@@ -1,9 +1,10 @@
 import { siteSchema, type SiteConfig } from "@/lib/profile-schema";
 
 const siteData = {
-  title: "Parag Palkar — Frontend Engineer",
+  title: "Parag Palkar · Software Developer",
   description:
-    "Portfolio and CV of Parag Palkar — frontend engineer building accessible, performant web UIs with React, Vue, TypeScript, and Next.js.",
+    "Software developer who ships accessible, performant web UI — React, Vue, TypeScript, Next.js. Mumbai · open to relocate.",
+  yearLabel: "Portfolio 2026",
   sections: {
     about: true,
     experience: true,
