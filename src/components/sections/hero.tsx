@@ -21,7 +21,7 @@ export function HeroSection() {
     <section
       id="top"
       aria-labelledby="hero-heading"
-      className="relative flex min-h-[calc(100svh-3.5rem)] flex-col justify-end pb-16 pt-20 sm:justify-center sm:pb-24 sm:pt-16"
+      className="relative flex min-h-[calc(100svh-3.5rem)] flex-col justify-center pb-16 pt-16 sm:pb-24 sm:pt-16"
     >
       <div className="mb-8 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
         <Badge
